@@ -11,6 +11,7 @@
 * [7.ReactUseEffect](#reactUseEffect)
 * [8.UseRef](#useRef)
 * [9.Memo](#memo)
+* [10.UseCallback](#useCallback)
 
 ## Basic
 
@@ -113,3 +114,7 @@ React의 useRef hook은 기본적으로 원하는 DOM Node에 접근해 referenc
 ## Memo
 
 React에는 어떤 값이나 함수 또는 컴포넌트를 memoize 할 수 있는 방안으로 memo, useMemo, useCallback 등을 제공합니다. <br>이 중에 이번에 알아볼 memo는 아래의 function signature와 같이 컴포넌트와 memoize 여부를 판단하는 함수를 받아 memoized 된 컴포넌트를 반환합니다.
+
+## UseCallback
+
+React에는 어떤 값이나 함수 또는 컴포넌트를 memoize 할 수 있는 방안으로 memo, useMemo, useCallback 등을 제공합니다.<br> 이 중에 이번에 알아볼 useCallback은 hooks로서 Function Component의 body에서 작동합니다. <br>아래의 function signature와 같이 memoize를 할 대상 함수와 memoize 여부 판단에 사용될 dependency array를 받아 memoized 된 함수를 반환합니다.
