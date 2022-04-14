@@ -13,6 +13,7 @@
 * [9.Memo](#memo)
 * [10.UseCallback](#useCallback)
 * [11.Immutability](#immutability)
+* [12.ReactRouter](#reactRouter)
 
 ## Basic
 
@@ -123,3 +124,9 @@ React에는 어떤 값이나 함수 또는 컴포넌트를 memoize 할 수 있�
 ## Immutability
 
 React의 Props와 State는 모두 불변성(immutability)을 유지하는 것이 필요합니다.<br> 불변성을 유지하면서 상태를 다루게 되면 이 상태를 다루는 함수 내부에서 side effect가 발생할 염려가 줄어듭니다.<br> 함수 내부에서 이 상태를 직접 변경할 수 없어서 추적이 용이해지기 때문입니다.<br> 이러한 불변성을 유지함으로써 얻는 이점들 외에도 컴포넌트가 불필요하게 자주 리렌더링 되는 것을 막는 역할을 하는데,<br> 이전 상태와 다음 상태를 비교할때 객체의 레퍼런스만 비교하는(shallow compare) 값싼 연산으로 리렌더링 여부를 결정하는데 큰 도움이 됩니다.<br> 상태를 immutable하게 관리하는 것에 대해 알아보기 위해서 간단하게 아래와 같은 형태로 Component 클래스를 작성해봅니다.
+
+## ReactRouter
+
+`SPA (Single Page Application)`를 개발하는 경우 기존의 웹 애플리케이션과는 다르게 다수의 페이지와 페이지 전환을 다루기 위해 추가적으로 `router`를 고려하게 됩니다.
+그러다보면 `react-router-dom`, `vue-router`, `@angular/router`, 등의 **추가적인 패키지**를 설치해서 사용하게 되는데요.
+컴포넌트 단위로 코드를 작성하고 그 컴포넌트들을 조합하여 앱을 구성하지만 페이지가 전환되거나 컴포넌트들을 페이지 단위로 배치할때 위와 같은 추가적인 라이브러리를 활용하여 `SPA`의 단점을 보완하는 것입니다.
