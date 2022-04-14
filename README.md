@@ -10,6 +10,7 @@
 * [6.ReactUsestate](#reactUsestate)
 * [7.ReactUseEffect](#reactUseEffect)
 * [8.UseRef](#useRef)
+* [9.Memo](#memo)
 
 ## Basic
 
@@ -108,3 +109,7 @@ react의 useEffect함수를 이해를 위한 구현
 ## UseRef
 
 React의 useRef hook은 기본적으로 원하는 DOM Node에 접근해 reference를 얻는 것에 목적이 있습니다.<br> 그러나 이렇게 DOM Node에 접근하는 용도로도 쓰이지만 useRef는 컴포넌트의 full lifetime 동안 레퍼런스가 유지되는 mutable object를 반환하기 때문에<br> 이전 값을 유지하는 용도로도 사용될 수 있습니다.<br> 즉, useRef는 매 렌더마다 레퍼런스가 고정된 객체를 반환합니다.<br> useRef는 아래와 같은 function signature를 갖고 있습니다.<br> 특정 타입을 갖는 초깃값을 받아 current 프로퍼티에 그 값을 갖는 리터럴 객체를 반환합니다.<br> 이때 이 객체는 seal이나 freeze가 되어있지 않은 객체여서 기존의 프로퍼티를 수정 및 삭제하거나 새 프로퍼티를 추가할 수 있습니다.
+
+## Memo
+
+React에는 어떤 값이나 함수 또는 컴포넌트를 memoize 할 수 있는 방안으로 memo, useMemo, useCallback 등을 제공합니다. <br>이 중에 이번에 알아볼 memo는 아래의 function signature와 같이 컴포넌트와 memoize 여부를 판단하는 함수를 받아 memoized 된 컴포넌트를 반환합니다.
