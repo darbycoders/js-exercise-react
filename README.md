@@ -6,6 +6,7 @@
 * [2.JsxReactElement](#jsxReactElement)
 * [3.Rendering](#rendering)
 * [4.State](#state)
+* [5.Props](#props)
 
 ## Basic
 
@@ -79,3 +80,16 @@ ReactDOM.render(element, container)
 ## State
 
 React Component의 상태는 State 라는 개념으로 다룹니다. 이 State는 변경 가능하며 변경될때마다 Component는 리렌더링 됩니다.<br> Class Component와 Function Component에 따라 State 관련 코드를 작성하는 방식과 내부적으로 동작하는 방식이 조금 다릅니다.<br> 다만 State를 직접 변경하지 않는다는 점과 State가 변경되면 리렌더링이 트리거되는 점은 여전히 같습니다.<br> Function Component에서의 State는 useState에서 다룰 예정이니 이번 케이스에서는 Class Component에서의 State에 대해서 다룹니다.<br> State와 리렌더링이 어떻게 동작하는지 알아보기 위해서 간단하게 아래와 같은 형태로 Component 클래스를 작성해봅니다.
+
+## Props
+
+React Component는 Props 라는 불변(immutable) 객체를 받습니다.<br>이 Props는 Properties를 의미하며 컴포넌트 트리에서 항상 위에서 아래로만 흐르는 단방향 특성을 갖습니다.<br> 그리고 컴포넌트는 전달받은 Props를 변경할 수 없습니다.<br> 이는 React가 컴포넌트를 Props 라는 arguments를 받아 UI 정보를 반환하는 하나의 단순한 함수로 바라보는 철학에서 비롯된 것입니다.<br> 다시 말해, 어떤 컴포넌트에 동일한 Props를 전달하면 항상 동일한 UI 결과가 나올 것이라고 확신할 수 있고<br> 이 높은 확신에서 UI를 더 선언적으로 바라보게 되는 점, 코드 가독성 향상, 테스트하기 쉬운 점 등의 이점을 얻게 됩니다.
+
+#### learning keyword
+
+- JavaScript
+  - Function
+    - Function Parameter Validation
+  - Object.seal() & Object.isSealed()
+  - Object.freeze() & Object.isFrozen()
+  - Object.getOwnPropertyDescriptor()
