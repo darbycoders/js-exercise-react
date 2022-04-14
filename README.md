@@ -5,6 +5,7 @@
 * [1.Basic](#basic)
 * [2.JsxReactElement](#jsxReactElement)
 * [3.Rendering](#rendering)
+* [4.State](#state)
 
 ## Basic
 
@@ -74,3 +75,7 @@ ReactDOM.render(element, container)
 #### learning keyword
 
 - ReactDOM.render()
+
+## State
+
+React Component의 상태는 State 라는 개념으로 다룹니다. 이 State는 변경 가능하며 변경될때마다 Component는 리렌더링 됩니다.<br> Class Component와 Function Component에 따라 State 관련 코드를 작성하는 방식과 내부적으로 동작하는 방식이 조금 다릅니다.<br> 다만 State를 직접 변경하지 않는다는 점과 State가 변경되면 리렌더링이 트리거되는 점은 여전히 같습니다.<br> Function Component에서의 State는 useState에서 다룰 예정이니 이번 케이스에서는 Class Component에서의 State에 대해서 다룹니다.<br> State와 리렌더링이 어떻게 동작하는지 알아보기 위해서 간단하게 아래와 같은 형태로 Component 클래스를 작성해봅니다.
