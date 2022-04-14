@@ -8,6 +8,7 @@
 * [4.State](#state)
 * [5.Props](#props)
 * [6.ReactUsestate](#reactUsestate)
+* [7.ReactUseEffect](#reactUseEffect)
 
 ## Basic
 
@@ -98,3 +99,7 @@ React Component는 Props 라는 불변(immutable) 객체를 받습니다.<br>이
 ## ReactUsestate
 
 react의 useState함수를 이해를 위한 구현
+
+## ReactUseEffect
+
+react의 useEffect함수를 이해를 위한 구현
