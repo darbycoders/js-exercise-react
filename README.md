@@ -12,6 +12,7 @@
 * [8.UseRef](#useRef)
 * [9.Memo](#memo)
 * [10.UseCallback](#useCallback)
+* [11.Immutability](#immutability)
 
 ## Basic
 
@@ -118,3 +119,7 @@ React에는 어떤 값이나 함수 또는 컴포넌트를 memoize 할 수 있�
 ## UseCallback
 
 React에는 어떤 값이나 함수 또는 컴포넌트를 memoize 할 수 있는 방안으로 memo, useMemo, useCallback 등을 제공합니다.<br> 이 중에 이번에 알아볼 useCallback은 hooks로서 Function Component의 body에서 작동합니다. <br>아래의 function signature와 같이 memoize를 할 대상 함수와 memoize 여부 판단에 사용될 dependency array를 받아 memoized 된 함수를 반환합니다.
+
+## Immutability
+
+React의 Props와 State는 모두 불변성(immutability)을 유지하는 것이 필요합니다.<br> 불변성을 유지하면서 상태를 다루게 되면 이 상태를 다루는 함수 내부에서 side effect가 발생할 염려가 줄어듭니다.<br> 함수 내부에서 이 상태를 직접 변경할 수 없어서 추적이 용이해지기 때문입니다.<br> 이러한 불변성을 유지함으로써 얻는 이점들 외에도 컴포넌트가 불필요하게 자주 리렌더링 되는 것을 막는 역할을 하는데,<br> 이전 상태와 다음 상태를 비교할때 객체의 레퍼런스만 비교하는(shallow compare) 값싼 연산으로 리렌더링 여부를 결정하는데 큰 도움이 됩니다.<br> 상태를 immutable하게 관리하는 것에 대해 알아보기 위해서 간단하게 아래와 같은 형태로 Component 클래스를 작성해봅니다.
