@@ -4,6 +4,7 @@
 
 * [1.Basic](#basic)
 * [2.JsxReactElement](#jsxReactElement)
+* [3.Rendering](#rendering)
 
 ## Basic
 
@@ -61,3 +62,15 @@ React를 처음 접할 때 **JSX** 만으로 컴포넌트를 작성했다면 `Re
 
 1. JSX
 2. React.createElement
+
+## Rendering
+
+```javascript
+ReactDOM.render(element, container)
+```
+
+첫 번째 인자로 제공된 React Element 를 두 번째 인자인 Container Element 의 내부에 렌더링시킬 수 있습니다.
+
+#### learning keyword
+
+- ReactDOM.render()
